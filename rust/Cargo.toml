@@ -1,0 +1,29 @@
+[package]
+name = "copy-path-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clipboard = "*"
+md5 = "0.7.0"
+failure = "*"
+
+
+
+[[bin]]
+name = "copy_md5"
+path = "src/copy_md5.rs"
+
+[[bin]]
+name = "copy_path_raw"
+path = "src/copy_path_raw.rs"
+
+[[bin]]
+name = "copy_path_escape"
+path = "src/copy_path_escape.rs"
+
+[[bin]]
+name = "menu_install"
+path = "src/install.rs"
