@@ -1,3 +1,4 @@
+#![windows_subsystem = "windows"]
 use failure::Error;
 use std::env;
 use std::fs;
