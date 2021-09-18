@@ -27,3 +27,7 @@ path = "src/copy_path_escape.rs"
 [[bin]]
 name = "menu_install"
 path = "src/install.rs"
+
+[[bin]]
+name = "pop_cmd"
+path = "src/pop_cmd.rs"
