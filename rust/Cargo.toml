@@ -31,3 +31,7 @@ path = "src/install.rs"
 [[bin]]
 name = "pop_cmd"
 path = "src/pop_cmd.rs"
+
+[[bin]]
+name = "im"
+path = "src/install_me.rs"
