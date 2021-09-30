@@ -6,10 +6,16 @@ use std::io::Read;
 mod utils;
 use utils::*;
 fn main() {
-    let cur_file = env::args().nth(1).unwrap();
+    let cur_file = env::args().collect::<Vec<String>>()[1..].join(" ");
     let cur_path_str = expand_path(&cur_file);
-    let hash = md5(&cur_path_str).unwrap();
-    fill_clipboard(hash);
+    match md5(&cur_path_str) {
+        Ok(hash) => {
+            fill_clipboard(hash);
+        }
+        Err(err) => {
+            eprintln!("Error: {}", err);
+        }
+    }
 }
 
 fn md5(target: &str) -> Result<String, Error> {
